@@ -4,8 +4,20 @@ class Program
 {
     static void Main(string[] args)
     {
+
         // Une application console qui indique si l’année (du calendrier grégorien. Par exemple, 2026) rentrée par l’utilisateur est bissextile ou non.
         // Les années bissextiles sont soit divisibles par 4 mais pas par 100, soit divisibles par 400.
+     
+        Console.WriteLine(" Entrer une année :");
+        int année = int.Parse(Console.ReadLine());
 
+        if ((année % 4 == 0 && année % 100 != 0) || année % 400 == 0)
+        {
+            Console.WriteLine($"{année} est une année bissextile.");
+        }
+        else
+        {
+            Console.WriteLine($"{année} n'est pas une année bissextile.");
+        }
     }
 }
